@@ -50,7 +50,7 @@ cfg <- list(
   intv = as.Date(c("2020-02-28", "2025-10-01")),
   tws = 365 * 3,
   refit_frequency = 60,
-  N_runs = 1,
+  N_runs = 1, # set to 20 to get the results in the paper
   portfolio_type = "EW",
   methods =  c("None", 
     "CCI_Det", "CCI_Stoch", 
