@@ -1,6 +1,10 @@
 # Conditional Copula Imputation – VaR Backtest
 
-This repository runs the multi-asset Value-at-Risk experiment built around conditional copula based weekend imputation. The primary entry point is `run_var_test.R`, which executes the full workflow across the equity/crypto pairs configured in the script.
+This repository runs the multi-asset Value-at-Risk experiment built around conditional copula based weekend imputation, as described in the paper:
+
+Hassan Sadeghi and Arash A. Amini, "Bridging Information Gaps: A Conditional Copula Framework for Cross-Market Data Imputation" (forthcoming).
+
+The primary entry point is `run_var_test.R`, which executes the full workflow across the equity/crypto pairs configured in the script.
 
 ## Repository layout
 - `run_var_test.R` – main driver that prepares data, runs rolling VaR backtests, and writes results to `output/`.
