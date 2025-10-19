@@ -1,0 +1,24 @@
+# R and RStudio files
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# Output files
+output/
+*.RDS
+*.rds
+
+# Data files (if large)
+data/
+
+# System files
+.DS_Store
+.Rapp.history
+
+# Temporary files
+*.swp
+*.swo
+*~
+.#*
+
