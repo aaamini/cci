@@ -8,6 +8,13 @@ if (!file.exists(file.path(project_root, "R", "utils_data.R"))) {
 }
 source(file.path(project_root, "R", "load_all.R"), chdir = TRUE)
 
+# --- 1.5. OUTPUT DIRECTORY SETUP ---------------------------------------------
+output_dir <- file.path(project_root, "output")
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+  cat("Created output directory:", output_dir, "\n")
+}
+
 # --- 2. DEPENDENCY CHECKS ----------------------------------------------------
 ensure_packages <- function(pkgs) {
   missing <- pkgs[!vapply(pkgs, requireNamespace, logical(1), quietly = TRUE)]
@@ -31,6 +38,7 @@ library(VineCopula)
 library(gamlss)
 library(parallel)
 library(mcprogress)
+library(xts)
 
 cfg <- list(
   # eq_syms = c("^IXIC", "GC=F", "SPY", "XLK", "XLV", "XLE", "XLF"),
